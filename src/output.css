@@ -16,6 +16,8 @@
     --color-indigo-500: oklch(0.585 0.233 277.117);
     --color-purple-500: oklch(0.627 0.265 303.9);
     --color-pink-500: oklch(0.656 0.241 354.308);
+    --color-slate-500: oklch(0.554 0.046 257.417);
+    --color-slate-600: oklch(0.446 0.043 257.281);
     --color-slate-950: oklch(0.129 0.042 264.695);
     --color-gray-500: oklch(0.551 0.027 264.364);
     --color-black: #000;
@@ -482,6 +484,9 @@
   }
   .h-100 {
     height: calc(var(--spacing) * 100);
+  }
+  .h-150 {
+    height: calc(var(--spacing) * 150);
   }
   .h-200 {
     height: calc(var(--spacing) * 200);
@@ -1230,6 +1235,12 @@
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
   }
+  .bg-slate-500 {
+    background-color: var(--color-slate-500);
+  }
+  .bg-slate-600 {
+    background-color: var(--color-slate-600);
+  }
   .bg-slate-950 {
     background-color: var(--color-slate-950);
   }
@@ -1451,6 +1462,9 @@
   }
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
+  }
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
   }
   .pt-20 {
     padding-top: calc(var(--spacing) * 20);
@@ -1799,6 +1813,12 @@
   }
   .opacity-5 {
     opacity: 5%;
+  }
+  .opacity-10 {
+    opacity: 10%;
+  }
+  .opacity-15 {
+    opacity: 15%;
   }
   .opacity-24 {
     opacity: 24%;
