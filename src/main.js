@@ -104,6 +104,8 @@ const pregunta = document.getElementById("pregunta");
 const resp1 = document.getElementById("resp1");
 const resp2 = document.getElementById("resp2");
 const resp3 = document.getElementById("resp3");
+const resultado = document.getElementById("resultado");
+const mensajeresultado = document.getElementById("mensajeresultado");
 
 // Posicion y puntos
 let pos = 0;
@@ -126,11 +128,13 @@ function responder(respuesta) {
         botones[respuesta - 1].classList.remove("bg-slate-100");
         botones[respuesta - 1].classList.add("bg-green-500", "text-white"); // Fondo verde para la respuesta correcta
         puntos++;
+        console.log("Posicion: " + pos);
     } else {
         botones[respuesta - 1].classList.remove("bg-slate-100");
         botones[respuesta - 1].classList.add("bg-red-500", "text-white"); // Fondo rojo para la incorrecta
         botones[questions[pos].correctAnswer - 1].classList.remove("bg-slate-100");
         botones[questions[pos].correctAnswer - 1].classList.add("bg-green-500", "text-white"); // Mostrar la correcta en verde
+        console.log("Posicion: " + pos);
     }
 
     // Deshabilitamos los botones para evitar múltiples selecciones
@@ -143,14 +147,29 @@ function responder(respuesta) {
             mostrarPregunta();
             // Se reestablecen los estilos y habilitar los botones
             botones.forEach(boton => {
-                boton.classList.remove("bg-green-500", "bg-red-500", "text-white");
-                botones[respuesta - 1].classList.add("bg-slate-100"); // Devolvemos el fondo gris
-                boton.disabled = false;
+                boton.classList.remove("bg-green-500", "bg-red-500", "text-white"); // Quitamoss el color
+                boton.classList.add("bg-slate-100"); // Devolvemos el fondo gris
+                boton.disabled = false; // Volvemos a activar el boton
             });
         } else {
             alert("Quiz terminado. Puntos: " + puntos);
+            document.getElementById("iniciopregunta").classList.add("hidden"); // Desaparece el quiz
+            
+            // Aparece la puntuación
+            document.getElementById("puntuacion").classList.remove("hidden");
+            resultado.innerHTML = puntos;
+
+            //Mensaje sobre la puntuacion
+            if(puntos < 5){
+                mensajeresultado.innerHTML = "Puedes hacerlo mejor.";
+            }else if(puntos >= 5 && puntos <= 7){
+                mensajeresultado.innerHTML = "No está nada mal.";
+            }else{
+                mensajeresultado.innerHTML = "¡Lo has hecho genial!";
+            }
         }
     }, 1000); // Esperamos 1 segundo antes de pasar a la siguiente pregunta
+
 }
 
 
