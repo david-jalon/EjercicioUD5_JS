@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Quiz</title>
+</head>
+<body>
+    <div class="max-w-sm mx-auto border-2 p-3 mt-4">
+        <h1 id="title">Quiz: Mejor alumno</h1>
+
+        <div class="flex flex-col p-4 gap-2">
+            <button id="btn1" onclick="responder(1)" class = "p-2 bg-slate-100">Tu</button>
+            <button id="btn2" onclick="responder(2)" class = "p-2 bg-slate-100">Yo</button>
+            <button id="btn3" onclick="responder(3)" class = "p-2 bg-slate-100">Nadie</button>
+        </div>
+
+        <ul id="list" class="flex flex-col p-4 gap-2">
+        </ul>
+        
+
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
