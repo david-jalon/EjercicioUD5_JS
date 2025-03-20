@@ -1,3 +1,4 @@
+// Array con todas las preguntas
 const questions = [
     {
         question: "Pregunta 1",
@@ -116,27 +117,41 @@ function mostrarPregunta(){
     resp3.innerHTML = questions[pos].answer[2];
 }
 
-function responder(respuesta){
-    if(respuesta == questions[pos].correctAnswer){
-        alert("Muy bien");
-        puntos++;
-        pos++;
-        console.log("Posicion: " + pos);
-        console.log("Puntos: " + puntos);
-        classlist.remove("bg-slate-100");
-        classlist.add("bg-green-200");
-        mostrarPregunta()
-    }else{
-        alert("Muy mal")
-        pos++;
-        console.log("Posicion: " + pos);
-        console.log("Puntos: " + puntos);
-        mostrarPregunta()
-    }
-    
+function responder(respuesta) {
+    // Todos los botones de respuesta
+    let botones = [resp1, resp2, resp3];
 
+    // Comprobamos si la respuesta es correcta
+    if (respuesta == questions[pos].correctAnswer) {
+        botones[respuesta - 1].classList.remove("bg-slate-100");
+        botones[respuesta - 1].classList.add("bg-green-500", "text-white"); // Fondo verde para la respuesta correcta
+        puntos++;
+    } else {
+        botones[respuesta - 1].classList.remove("bg-slate-100");
+        botones[respuesta - 1].classList.add("bg-red-500", "text-white"); // Fondo rojo para la incorrecta
+        botones[questions[pos].correctAnswer - 1].classList.remove("bg-slate-100");
+        botones[questions[pos].correctAnswer - 1].classList.add("bg-green-500", "text-white"); // Mostrar la correcta en verde
+    }
+
+    // Deshabilitamos los botones para evitar múltiples selecciones
+    botones.forEach(boton => boton.disabled = true);
+
+    // Pasamos a la siguiente pregunta después de un pequeño retraso
+    setTimeout(() => {
+        pos++;
+        if (pos < questions.length) {
+            mostrarPregunta();
+            // Se reestablecen los estilos y habilitar los botones
+            botones.forEach(boton => {
+                boton.classList.remove("bg-green-500", "bg-red-500", "text-white");
+                botones[respuesta - 1].classList.add("bg-slate-100"); // Devolvemos el fondo gris
+                boton.disabled = false;
+            });
+        } else {
+            alert("Quiz terminado. Puntos: " + puntos);
+        }
+    }, 1000); // Esperamos 1 segundo antes de pasar a la siguiente pregunta
 }
 
+
 mostrarPregunta();
-
-
