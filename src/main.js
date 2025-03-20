@@ -28,28 +28,39 @@ const questions = [
     }
 ]
 
-const title = document.getElementById("title");
-const btn1 = document.getElementById("btn1");
-const btn2 = document.getElementById("btn2");
-const btn3 = document.getElementById("btn3");
+// Controlamos el funcionamiento del boton del quiz
+document.getElementById("inicioboton").addEventListener("click", function(){
+    document.getElementById("inicio").classList.add("hidden"); // Esconde el titulo
+    document.getElementById("inicioboton").classList.add("hidden"); // Esconde el boton
+    document.getElementById("iniciopregunta").classList.remove("hidden"); // Aparece el quiz
+})
+
+
+
+
+const pregunta = document.getElementById("pregunta");
+const resp1 = document.getElementById("resp1");
+const resp2 = document.getElementById("resp2");
+const resp3 = document.getElementById("resp3");
 
 let pos = 0;
 
-function mopstrarQuestion(){
-    title.innerHTML = questions[pos].question;
-    btn1.innerHTML = questions[pos].answer[0];
-    btn2.innerHTML = questions[pos].answer[1];
-    btn3.innerHTML = questions[pos].answer[2];
+function mopstrarPregunta(){
+    pregunta.innerHTML = questions[pos].question;
+    resp1.innerHTML = questions[pos].answer[0];
+    resp2.innerHTML = questions[pos].answer[1];
+    resp3.innerHTML = questions[pos].answer[2];
 }
 
 function responder(respuesta){
     if(respuesta == questions[pos].correctAnswer){
         alert("Muy bien")
         pos++
-        mopstrarQuestion()
+        mopstrarPregunta()
     }else{
         alert("Muy mal")
     }
 }
 
-mopstrarQuestion()
+mopstrarPregunta()
+
