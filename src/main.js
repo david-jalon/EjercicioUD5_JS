@@ -126,14 +126,14 @@ function responder(respuesta) {
 
     // Comprobamos si la respuesta es correcta
     if (respuesta == questions[pos].correctAnswer) {
-        botones[respuesta - 1].classList.remove("bg-slate-100");
+        botones[respuesta - 1].classList.remove("bg-slate-600");
         botones[respuesta - 1].classList.add("bg-green-500", "text-white"); // Fondo verde para la respuesta correcta
         puntos++;
         console.log("Posicion: " + pos);
     } else {
-        botones[respuesta - 1].classList.remove("bg-slate-100");
+        botones[respuesta - 1].classList.remove("bg-slate-600");
         botones[respuesta - 1].classList.add("bg-red-500", "text-white"); // Fondo rojo para la incorrecta
-        botones[questions[pos].correctAnswer - 1].classList.remove("bg-slate-100");
+        botones[questions[pos].correctAnswer - 1].classList.remove("bg-slate-600");
         botones[questions[pos].correctAnswer - 1].classList.add("bg-green-500", "text-white"); // Mostrar la correcta en verde
         console.log("Posicion: " + pos);
     }
@@ -154,7 +154,7 @@ function responder(respuesta) {
             // Se reestablecen los estilos y habilitar los botones
             botones.forEach(boton => {
                 boton.classList.remove("bg-green-500", "bg-red-500", "text-white"); // Quitamoss el color
-                boton.classList.add("bg-slate-100"); // Devolvemos el fondo gris
+                boton.classList.add("bg-slate-600"); // Devolvemos el fondo gris
                 boton.disabled = false; // Volvemos a activar el boton
             });
         } else {
