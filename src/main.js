@@ -1,94 +1,94 @@
 // Array con todas las preguntas
 const questions = [
     {
-        question: "Pregunta 1",
+        question: "1. ¿Cuántos puntos de vida tiene un jugador al comienzo de la partida?",
         answer: [
-            "Respuesta 1.1",
-            "Respuesta 1.2",
-            "Respuesta 1.3"
-        ],
-        correctAnswer: 1
-    },
-    {
-        question: "Pregunta 2",
-        answer: [
-            "Respuesta 2.1",
-            "Respuesta 2.2",
-            "Respuesta 2.3"
-        ],
-        correctAnswer: 2
-    },
-    {
-        question: "Pregunta 3",
-        answer: [
-            "Respuesta 3.1",
-            "Respuesta 3.2",
-            "Respuesta 3.3"
+            "A) 10",
+            "B) 30",
+            "C) 20"
         ],
         correctAnswer: 3
     },
     {
-        question: "Pregunta 4",
+        question: "2. ¿Cuántos tipos de cartas existen en Magic: The Gathering?",
         answer: [
-            "Respuesta 4.1",
-            "Respuesta 4.2",
-            "Respuesta 4.3"
+            "A) Criatura, Magia, Conjuro, Encantamiento, Equipamiento y Tierras",
+            "B) Criatura, Instantáneo, Conjuro, Encantamiento, Artefacto, Planeswalker y Tierra",
+            "C) Criatura, Hechizo, Equipo, Artefacto, Encantamiento, Planeswalker y Tierras"
         ],
         correctAnswer: 2
     },
     {
-        question: "Pregunta 5",
+        question: "3. ¿Cuántas cartas roba cada jugador en su turno inicial (en una partida normal de 1 vs 1)?",
         answer: [
-            "Respuesta 5.1",
-            "Respuesta 5.2",
-            "Respuesta 5.3"
+            "A) 9",
+            "B) 7",
+            "C) 5"
         ],
         correctAnswer: 2
     },
     {
-        question: "Pregunta 6",
+        question: "4. ¿Qué tipo de carta se usa para generar maná en la mayoría de los casos?",
         answer: [
-            "Respuesta 6.1",
-            "Respuesta 6.2",
-            "Respuesta 6.3"
+            "A) Criaturas",
+            "B) Tierras",
+            "C) Encantamientos"
         ],
         correctAnswer: 2
     },
     {
-        question: "Pregunta 7",
+        question: "5. ¿En qué fase se pueden lanzar instantáneos?",
         answer: [
-            "Respuesta 7.1",
-            "Respuesta 7.2",
-            "Respuesta 7.3"
+            "A) Solo en la fase de combate",
+            "B) Solo en la fase principal",
+            "C) En cualquier fase del turno y en respuesta a otras acciones"
+        ],
+        correctAnswer: 3
+    },
+    {
+        question: "6. ¿Qué pasa si una criatura tiene más resistencia que el daño recibido en un turno?",
+        answer: [
+            "A) Sobrevive y se cura al final del turno",
+            "B) Pierde puntos de resistencia permanentemente",
+            "C) Se destruye si recibe cualquier cantidad de daño"
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "7. ¿Qué significa la palabra clave \"Vínculo Vital?\"?",
+        answer: [
+            "A) La criatura solo puede ser bloqueada por criaturas con la misma habilidad",
+            "B) Cuando una criatura con esta habilidad hace daño, el controlador gana esa cantidad de vida",
+            "C) La criatura puede ser regenerada una vez por turno"
         ],
         correctAnswer: 2
     },
     {
-        question: "Pregunta 8",
+        question: "8. ¿Qué condición debe cumplirse para que un jugador pierda la partida?",
         answer: [
-            "Respuesta 8.1",
-            "Respuesta 8.2",
-            "Respuesta 8.3"
+            "A) No poder lanzar hechizos durante 3 turnos consecutivos",
+            "B) Tener 5 tierras en el campo",
+            "C) Tener 0 o menos puntos de vida"
         ],
-        correctAnswer: 2
+        correctAnswer: 3
     },
     {
-        question: "Pregunta 9",
+        question: "9. ¿Cuántas tierras puede jugar un jugador por turno, salvo efectos adicionales?",
         answer: [
-            "Respuesta 9.1",
-            "Respuesta 9.2",
-            "Respuesta 9.3"
+            "A) 1",
+            "B) 3",
+            "C) 2"
         ],
-        correctAnswer: 2
+        correctAnswer: 1
     },
     {
-        question: "Pregunta 10",
+        question: "10. ¿Qué significa la habilidad \"Arrollar\"?",
         answer: [
-            "Respuesta 10.1",
-            "Respuesta 10.2",
-            "Respuesta 10.3"
+            "A) La criatura gana +1/+1 por cada criatura que controle su oponente",
+            "B) La criatura puede atacar en el turno en que entra al campo de batalla",
+            "C) Si una criatura con esta habilidad hace más daño del necesario para destruir a un bloqueador, el daño sobrante se asigna al jugador o planeswalker defensor"
         ],
-        correctAnswer: 2
+        correctAnswer: 3
     }
 ]
 
