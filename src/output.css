@@ -503,6 +503,9 @@
   .h-300 {
     height: calc(var(--spacing) * 300);
   }
+  .h-350 {
+    height: calc(var(--spacing) * 350);
+  }
   .h-500 {
     height: calc(var(--spacing) * 500);
   }
@@ -524,11 +527,17 @@
   .max-h-screen {
     max-height: 100vh;
   }
+  .min-h-50 {
+    min-height: calc(var(--spacing) * 50);
+  }
   .min-h-80 {
     min-height: calc(var(--spacing) * 80);
   }
   .min-h-96 {
     min-height: calc(var(--spacing) * 96);
+  }
+  .min-h-100 {
+    min-height: calc(var(--spacing) * 100);
   }
   .min-h-150 {
     min-height: calc(var(--spacing) * 150);
@@ -1560,6 +1569,9 @@
   .pb-20 {
     padding-bottom: calc(var(--spacing) * 20);
   }
+  .pb-30 {
+    padding-bottom: calc(var(--spacing) * 30);
+  }
   .pb-40 {
     padding-bottom: calc(var(--spacing) * 40);
   }
@@ -1868,6 +1880,12 @@
   }
   .opacity-25 {
     opacity: 25%;
+  }
+  .opacity-75 {
+    opacity: 75%;
+  }
+  .opacity-100 {
+    opacity: 100%;
   }
   .mix-blend-plus-darker {
     mix-blend-mode: plus-darker;
