@@ -158,7 +158,6 @@ function responder(respuesta) {
                 boton.disabled = false; // Volvemos a activar el boton
             });
         } else {
-            alert("Quiz terminado. Puntos: " + puntos);
             document.getElementById("iniciopregunta").classList.add("hidden"); // Desaparece el quiz
 
             
