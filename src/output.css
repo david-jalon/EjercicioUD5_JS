@@ -500,6 +500,9 @@
   .h-200 {
     height: calc(var(--spacing) * 200);
   }
+  .h-300 {
+    height: calc(var(--spacing) * 300);
+  }
   .h-500 {
     height: calc(var(--spacing) * 500);
   }
@@ -1326,6 +1329,12 @@
   }
   .bg-\[url\(\'img\/fondo3\.wep\'\)\] {
     background-image: url('img/fondo3.wep');
+  }
+  .bg-\[url\(\'img\/playing_01\.jpg\'\)\] {
+    background-image: url('img/playing_01.jpg');
+  }
+  .bg-\[url\(\'img\/playing_o1\.jpg\'\)\] {
+    background-image: url('img/playing_o1.jpg');
   }
   .bg-\[url\(\'img\/primerBanner\.jpg\'\)\] {
     background-image: url('img/primerBanner.jpg');

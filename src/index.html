@@ -213,57 +213,65 @@
             </div>
         </div>
         <!--Fondo de tarjetas-->
-        <div class="z-[-1] opacity-25 gap-[20px] items-center content-center bg-[url('img/fondo3.webp')] w-full h-full bg-cover">
+        <div
+            class="z-[-1] opacity-25 gap-[20px] items-center content-center bg-[url('img/fondo3.webp')] w-full h-full bg-cover">
         </div>
     </div>
 
     <!--Quiz contenedor-->
-    <div class="flex gap-[20px] flex-row justify-center flex-nowrap items-center content-center h-200 bg-amber-400">
+    <div class="relative flex gap-[20px] items-center content-center justify-center h-300">
+        <div class="absolute flex gap-[20px] flex-row justify-center flex-nowrap items-center content-center h-200">
 
-        <!--Quiz-->
-        <div class="max-w-sm mx-auto p-3 mt-4 min-h-80 bg-slate-600 rounded-lg">
-            <!--Inicio del quiz con boton-->
-            <div id="inicio" class="flex text-white text-2xl text-center p-4 pt-20 pb-10">¿Te atreves a demostrar lo
-                aprendido?</div>
-            <div class="flex justify-center">
-                <button id="inicioboton" class="cursor-pointer transition-all bg-blue-500 text-white px-8 py-2 rounded-lg 
+            <!--Quiz-->
+            <div class="max-w-sm mx-auto p-3 mt-4 min-h-80 bg-slate-600 rounded-lg">
+                <!--Inicio del quiz con boton-->
+                <div id="inicio" class="flex text-white text-2xl text-center p-4 pt-20 pb-10">¿Te atreves a demostrar lo
+                    aprendido?</div>
+                <div class="flex justify-center">
+                    <button id="inicioboton" class="cursor-pointer transition-all bg-blue-500 text-white px-8 py-2 rounded-lg 
                     border-blue-600 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 
                      active:translate-y-[2px]">
-                    Comenzar Quiz
-                </button>
+                        Comenzar Quiz
+                    </button>
+                </div>
+
+                <!--Preguntas en hidden-->
+                <div id="iniciopregunta" class="hidden">
+                    <div class="flex flex-col bg-slate-400 rounded-lg">
+                        <h1 id="pregunta" class=" text-white text-xl p-2">Quiz: Mejor alumno</h1>
+                    </div>
+
+                    <!--Barra de puntuacion-->
+                    <div id="barrafija"
+                        class="flex flex-col relative bg-amber-100 max-w-sm mx auto h-2 w-full rounded-md mt-4 mx-auto">
+                        <div id="barraprogreso" class="absolute bg-amber-500 max-w-sm mx auto h-2 w-0 rounded-md"></div>
+                    </div>
+
+
+                    <div class="flex flex-col p-4 gap-2">
+                        <button id="resp1" onclick="responder(1)" class="p-2 bg-slate-400 rounded-lg">Tu</button>
+                        <button id="resp2" onclick="responder(2)" class="p-2 bg-slate-400 rounded-lg">Yo</button>
+                        <button id="resp3" onclick="responder(3)" class="p-2 bg-slate-400 rounded-lg">Nadie</button>
+                    </div>
+                </div>
+
+                <!--Puntuación-->
+                <div id="puntuacion" class="hidden flex-col">
+                    <div class="flex flex-col justify-center p-2 bg-slate-400 rounded-lg">
+                        <h1 class=" text-white text-2xl justify-center text-center">Puntuación: </h1>
+                    </div>
+
+                    <p id="resultado" class="flex justify-center text-5xl">10</p>
+                    <p id="mensajeresultado" class="flex justify-center text-xl">Mensaje resultado</p>
+                    <p class="flex justify-center text-2xl">¡Gracias por participar!</p>
+                </div>
+
             </div>
+        </div>
 
-            <!--Preguntas en hidden-->
-            <div id="iniciopregunta" class="hidden">
-                <div class="flex flex-col bg-slate-400 rounded-lg">
-                    <h1 id="pregunta" class=" text-white text-2xl p-2">Quiz: Mejor alumno</h1>
-                </div>
-
-                <!--Barra de puntuacion-->
-                <div id="barrafija"
-                    class="flex flex-col relative bg-amber-100 max-w-sm mx auto h-2 w-full rounded-md mt-4 mx-auto">
-                    <div id="barraprogreso" class="absolute bg-amber-500 max-w-sm mx auto h-2 w-0 rounded-md"></div>
-                </div>
-
-
-                <div class="flex flex-col p-4 gap-2">
-                    <button id="resp1" onclick="responder(1)" class="p-2 bg-slate-400 rounded-lg">Tu</button>
-                    <button id="resp2" onclick="responder(2)" class="p-2 bg-slate-400 rounded-lg">Yo</button>
-                    <button id="resp3" onclick="responder(3)" class="p-2 bg-slate-400 rounded-lg">Nadie</button>
-                </div>
-            </div>
-
-            <!--Puntuación-->
-            <div id="puntuacion" class="hidden flex-col">
-                <div class="flex flex-col justify-center p-2 bg-slate-400 rounded-lg">
-                    <h1 class=" text-white text-2xl justify-center text-center">Puntuación: </h1>
-                </div>
-
-                <p id="resultado" class="flex justify-center text-5xl">10</p>
-                <p id="mensajeresultado" class="flex justify-center text-xl">Mensaje resultado</p>
-                <p class="flex justify-center text-2xl">¡Gracias por participar!</p>
-            </div>
-
+        <!--Fondo de Quiz-->
+        <div
+            class="z-[-1] opacity-25 gap-[20px] items-center content-center bg-[url('img/playing_01.jpg')] w-full h-full bg-cover">
         </div>
     </div>
 
