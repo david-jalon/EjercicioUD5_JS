@@ -203,31 +203,34 @@
     <div class="flex gap-[20px] flex-row justify-center flex-nowrap items-center content-center h-200 bg-amber-400">
 
         <!--Quiz-->
-        <div class="max-w-sm mx-auto border-2 p-3 mt-4">
+        <div class="max-w-sm mx-auto p-3 mt-4 min-h-80 bg-slate-600 rounded-lg">
             <!--Inicio del quiz con boton-->
             <div id="inicio" class="text-white text-2xl">¿Te atreves a demostrar lo aprendido?</div>
             <div class="flex justify-center">
                 <button id="inicioboton"
-                    class="cursor-pointer transition-all bg-blue-500 text-white px-6 py-2 rounded-lg
-        border-blue-600 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]">
+                    class="cursor-pointer transition-all bg-blue-500 text-white px-6 py-2 rounded-lg 
+                    border-blue-600 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 
+                     active:translate-y-[2px]">
                     Comenzar Quiz
                 </button>
             </div>
 
             <!--Preguntas en hidden-->
             <div id="iniciopregunta" class="hidden">
-                <h1 id="pregunta" class="text-black text-2xl pb-4">Quiz: Mejor alumno</h1>
+                <div class="flex flex-col bg-slate-400 rounded-lg">
+                    <h1 id="pregunta" class=" text-white text-2xl p-2">Quiz: Mejor alumno</h1>
+                </div>
 
                 <!--Barra de puntuacion-->
-                <div id="barrafija" class="relative bg-amber-100 max-w-sm mx auto h-2 w-[350px] rounded-md">
+                <div id="barrafija" class="flex flex-col relative bg-amber-100 max-w-sm mx auto h-2 w-[350px] rounded-md">
                     <div id="barraprogreso" class="absolute bg-amber-500 max-w-sm mx auto h-2 w-0 rounded-md"></div>
                 </div>
 
 
                 <div class="flex flex-col p-4 gap-2">
-                    <button id="resp1" onclick="responder(1)" class="p-2 bg-slate-600 rounded-lg">Tu</button>
-                    <button id="resp2" onclick="responder(2)" class="p-2 bg-slate-600 rounded-lg">Yo</button>
-                    <button id="resp3" onclick="responder(3)" class="p-2 bg-slate-600 rounded-lg">Nadie</button>
+                    <button id="resp1" onclick="responder(1)" class="p-2 bg-slate-400 rounded-lg">Tu</button>
+                    <button id="resp2" onclick="responder(2)" class="p-2 bg-slate-400 rounded-lg">Yo</button>
+                    <button id="resp3" onclick="responder(3)" class="p-2 bg-slate-400 rounded-lg">Nadie</button>
                 </div>
             </div>
 
