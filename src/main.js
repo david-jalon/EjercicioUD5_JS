@@ -106,6 +106,7 @@ const resp2 = document.getElementById("resp2");
 const resp3 = document.getElementById("resp3");
 const resultado = document.getElementById("resultado");
 const mensajeresultado = document.getElementById("mensajeresultado");
+const barraprogreso = document.getElementById("barraprogreso");
 
 // Posicion y puntos
 let pos = 0;
@@ -143,6 +144,11 @@ function responder(respuesta) {
     // Pasamos a la siguiente pregunta después de un pequeño retraso
     setTimeout(() => {
         pos++;
+
+        // Aumenta la barra de puntuación
+        let aumentoBarra = (pos / questions.length) * 100; // Porcentaje basado en total de preguntas
+        barraprogreso.style.width = `${aumentoBarra}%`; // Style para el aumento de la barra, con tailwind da problemas raros
+
         if (pos < questions.length) {
             mostrarPregunta();
             // Se reestablecen los estilos y habilitar los botones
@@ -154,6 +160,7 @@ function responder(respuesta) {
         } else {
             alert("Quiz terminado. Puntos: " + puntos);
             document.getElementById("iniciopregunta").classList.add("hidden"); // Desaparece el quiz
+
             
             // Aparece la puntuación
             document.getElementById("puntuacion").classList.remove("hidden");
