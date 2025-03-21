@@ -129,13 +129,11 @@ function responder(respuesta) {
         botones[respuesta - 1].classList.remove("bg-slate-400");
         botones[respuesta - 1].classList.add("bg-green-500", "text-white"); // Fondo verde para la respuesta correcta
         puntos++;
-        console.log("Posicion: " + pos);
     } else {
         botones[respuesta - 1].classList.remove("bg-slate-400");
         botones[respuesta - 1].classList.add("bg-red-500", "text-white"); // Fondo rojo para la incorrecta
         botones[questions[pos].correctAnswer - 1].classList.remove("bg-slate-400");
         botones[questions[pos].correctAnswer - 1].classList.add("bg-green-500", "text-white"); // Mostrar la correcta en verde
-        console.log("Posicion: " + pos);
     }
 
     // Deshabilitamos los botones para evitar múltiples selecciones
