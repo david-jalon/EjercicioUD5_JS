@@ -383,6 +383,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .my-auto {
+    margin-block: auto;
+  }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
@@ -514,6 +517,9 @@
   }
   .min-h-96 {
     min-height: calc(var(--spacing) * 96);
+  }
+  .min-h-150 {
+    min-height: calc(var(--spacing) * 150);
   }
   .min-h-screen {
     min-height: 100vh;
@@ -2160,6 +2166,16 @@
     &:active {
       --tw-brightness: brightness(90%);
       filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+    }
+  }
+  .lg\:w-1\/4 {
+    @media (width >= 64rem) {
+      width: calc(1/4 * 100%);
+    }
+  }
+  .lg\:flex-row {
+    @media (width >= 64rem) {
+      flex-direction: row;
     }
   }
 }
