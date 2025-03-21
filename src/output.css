@@ -389,6 +389,9 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
   .box-border {
     box-sizing: border-box;
   }
@@ -497,6 +500,12 @@
   .h-200 {
     height: calc(var(--spacing) * 200);
   }
+  .h-500 {
+    height: calc(var(--spacing) * 500);
+  }
+  .h-auto {
+    height: auto;
+  }
   .h-fit {
     height: fit-content;
   }
@@ -545,6 +554,9 @@
   .w-370 {
     width: calc(var(--spacing) * 370);
   }
+  .w-500 {
+    width: calc(var(--spacing) * 500);
+  }
   .w-1000 {
     width: calc(var(--spacing) * 1000);
   }
@@ -556,6 +568,9 @@
   }
   .w-\[35px\] {
     width: 35px;
+  }
+  .w-\[50\%\] {
+    width: 50%;
   }
   .w-\[70px\] {
     width: 70px;
@@ -589,6 +604,12 @@
   }
   .min-w-screen {
     min-width: 100vw;
+  }
+  .flex-1 {
+    flex: 1;
+  }
+  .flex-1\/2 {
+    flex: calc(1/2 * 100%);
   }
   .flex-auto {
     flex: auto;
@@ -1299,6 +1320,12 @@
   }
   .bg-\[url\(\'img\/fondo2\.jpg\'\)\] {
     background-image: url('img/fondo2.jpg');
+  }
+  .bg-\[url\(\'img\/fondo3\.webp\'\)\] {
+    background-image: url('img/fondo3.webp');
+  }
+  .bg-\[url\(\'img\/fondo3\.wep\'\)\] {
+    background-image: url('img/fondo3.wep');
   }
   .bg-\[url\(\'img\/primerBanner\.jpg\'\)\] {
     background-image: url('img/primerBanner.jpg');
